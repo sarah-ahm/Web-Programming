@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Variables</title>
+</head>
+<body>
+	<script>
+
+		var x = 0;
+		var str = "hello";
+		// what does the following statement output?: NaNhello
+		console.log(x + y + str);
+
+		var y = 1;
+
+		// ----------------------------------------
+
+		var obj = {
+			time: new Date(),
+			greeting: "Hello World!",
+			number: 2
+		};
+
+		// Print the greeting by accessing it from the object
+		console.log(obj.greeting);
+
+		// -----------------------------------------
+
+		// Which of the following statements is printed?: false
+
+		if (z) {
+			console.log("true"); 
+		} else {
+			console.log("false");
+		}
+
+		var z = true;
+
+		// -------------------------------------------
+
+		var w = x || y;
+
+		// What is the value of w?: 1
+		console.log(w);
+
+	</script>
+</body>
+</html>

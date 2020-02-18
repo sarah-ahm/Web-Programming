@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lab 5 - Part 1</title>
+	<style>
+		p[id] {
+			height: 100px;
+		}
+
+		.flashy {
+		  animation: blinker 1s linear infinite;
+		}
+
+		@keyframes blinker {  
+		  50% { opacity: 0; }
+		}
+	</style>
+</head>
+<body>
+	<label>My Input: <input type="text" id="myInput"></label><button id="button" type="button">Submit</button>
+	<p>All UpperCase</p>
+	<hr>
+	<p id="allUpper"></p>
+	<p>All Lowercase</p>
+	<hr>
+	<p id="allLower"></p>
+	<p>Red Text</p>
+	<hr>
+	<p id="redText"></p>
+	<p>Flashy Text</p>
+	<hr>
+	<p id="flashyText"></p>
+	<script>
+	
+	// Change all the text to uppercase using JavaScript String methods and add it to the paragraph with id "allUpper".
+	function allUpper(input) {
+		var para = document.getElementById("allUpper");
+  		var upper = input.toUpperCase();
+		para.innerHTML = upper;
+	}
+	// Change all the text to lowercase using JavaScript String methods and add it to the paragraph with id "allLower".
+	function allLower(input) {
+		var para = document.getElementById("allLower");
+  		var lower = input.toLowerCase();
+		para.innerHTML = lower;
+	}
+	// Change the color of the text to "red" and add it to the paragraph with id "redText"
+	function redText(input) {
+		var para = document.getElementById("redText");
+		para.innerHTML = input;
+		para.style.color = "red"; 
+	}
+	// Add the text to the paragraph with id "flashyText", and also add the class "flashy" to the paragraph.
+	function flashyText(input) {
+		var para = document.getElementById("flashyText");
+		para.innerHTML = input;
+		para.classList.add("flashy");
+	}
+
+	// Add event listener to button 
+	document.getElementById("button").addEventListener("click", changeText);
+
+	// Performs all helper functions on given input
+	function changeText(){
+		var input = document.getElementById("myInput").value;
+		allUpper(input);
+		allLower(input);
+		redText(input);
+		flashyText(input);
+	}
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lab 5 - Part 3</title>
+</head>
+<body>
+	<!-- Sample HTML -->
+	<label>My Input: <input type="text" id="myInput"></label><button id="submit" type="button">Submit</button>
+	<img src="http://students.engr.scu.edu/~adiaztos/resources/choconut.jpg" alt="A Goat">
+	<p id="somePara"><span class="allSpans"></span></p>
+
+	<script>
+
+		// Your function goes here 
+		function getElementsByAttribute(att){
+			// Get all the elements in the document
+			var allElements = document.getElementsByTagName('*'); 
+			// For each element on the page, check whether it has the given attribute
+    		var elementArray = [];
+    		for (var i = 0, element; element = allElements[i]; i++) {
+        		if (element.getAttribute(att)) {
+					elementArray.push(element);
+				}
+    		}
+    		return elementArray;
+			
+		}; 
+
+
+		// test your function with some sample attributes
+		var inputs = document.getElementsByTagName("button");
+		for (i in inputs){
+			inputs[i].onclick = function(){
+				// get the attribute from the input box
+				var userInput = document.getElementById("myInput").value;
+				// find elements with the given attribute
+				var getAtt = getElementsByAttribute(userInput);
+				// list the elements 
+				console.log('Here are the elements with the ' + userInput + ' attribute: ');
+				for (var i in getAtt){
+					console.log(getAtt[i]);
+				}
+			};
+		}
+		
+	</script>
+</body>
+</html>

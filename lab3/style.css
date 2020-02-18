@@ -1,0 +1,99 @@
+* {
+    box-sizing: content-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+.content{
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+}
+
+nav{
+    padding: 20px; 
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.primary{
+    background-color: black !important ;
+}
+
+.secondary{
+    background-color: rgb(77, 1, 77) !important ;
+}
+
+.accent{
+    background-color:yellow; 
+}
+
+.primary-color{
+    color: white;
+}
+
+.secondary-color{
+    color: white;
+}
+
+.accent{
+    color:black;
+}
+
+.row {
+    padding: 10px;
+    display: flex;
+}
+  
+.column1 {
+    padding: 20px;
+    flex-basis: 25%;
+    justify-content: space-around;
+    flex-direction: row;
+}
+  
+.column2 {
+    padding: 20px;
+    flex-basis: 75%;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.column {
+    padding: 20px;
+    flex-basis: 25%;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+ul{
+    padding: 10px;
+}
+
+a{
+    padding: 10px;
+}
+
+a:hover{
+    color: rgba(0, 255, 0, 0.5);
+}
+
+footer{
+    color: white;
+    padding: 10px;
+    width: 100%;
+}
+

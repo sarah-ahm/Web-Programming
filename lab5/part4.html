@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lab 5 - Part 4</title>
+</head>
+<body>
+	<button id="btn0">Button 1!</button>
+	<button id="btn1">Button 2!</button>
+	<button id="btn2">Button 3!</button>
+
+	<script>
+		var btnClick = function(btnNumVar){
+			document.getElementById('btn' + btnNum).onclick = function(){
+				alert("I am button " + (btnNumVar + 1) + "!");
+			}
+		};	
+	
+		var btnNum;
+		for(btnNum = 0; btnNum < 3; btnNum++){
+			btnClick(btnNum);
+		}
+	</script>
+</body>
+</html>

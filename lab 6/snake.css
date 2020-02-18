@@ -1,0 +1,21 @@
+html, body {
+	margin: 0;
+	padding: 0;
+}
+#play-area {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	width: 602px;
+	height: 602px;
+	border: black dashed 5px;
+}
+
+[id^="snake"], .food {
+	height: 10px;
+	width: 10px;
+	background-color: black;
+	position: absolute;
+	top: 38px;
+	left: 26px;
+}
