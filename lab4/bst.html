@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Binary Search Tree</title>
+</head>
+<body>
+	<script type="text/javascript" src="http://students.engr.scu.edu/~adiaztos/resources/testBst.js"></script>
+	<script>
+
+		function Node(val){
+			this.val = val;
+			this.leftChild = null;
+			this.rightChild = null;
+		}
+
+		function BinarySearchTree(){
+			this.root = null;
+		}
+		
+		// inserts the node into the binary search tree	
+		BinarySearchTree.prototype.insert = function(val){
+			var rootNode = this.root;
+			var node = new Node(val);
+			if(!rootNode){
+				this.root = node;
+				return;
+			}
+			
+			var currentNode = rootNode;
+			while(currentNode){
+				if(val < currentNode.val){
+					if(!currentNode.leftChild){
+						currentNode.leftChild = node;
+						break;
+					} else {
+						currentNode = currentNode.leftChild;
+					}
+				} else { 
+					if(!currentNode.rightChild){
+						currentNode.rightChild = node;
+						break;
+					} else {
+						currentNode = currentNode.rightChild;
+					}
+				}
+			}	
+		}
+
+		// searches the binary search tree for the certain val
+		BinarySearchTree.prototype.search = function(val){
+			var currentNode = this.root;
+			
+			console.log(currentNode.val);
+			while(currentNode){
+				if(currentNode.val == val){
+					return currentNode;
+				} else if(currentNode.val > val){
+					currentNode = currentNode.leftChild;
+				} else {
+					currentNode = currentNode.rightChild;
+				}
+			}
+			return;
+		}
+
+		// implements a stack in JavaScript
+		function Stack(){
+			this.stackArray = new Array();
+			this.pop = function(){
+				return this.stackArray.pop();
+			}
+			this.push = function(item){
+				this.stackArray.push(item);
+			}
+			this.isEmpty = function(){
+				return (this.stackArray.length == 0);
+			}
+		}
+		
+		// iterates through the tree in order from least to greatest
+		BinarySearchTree.prototype.inorder = function(fn){
+			var stack = new Stack();
+			var node = this.root;
+
+			while(true){
+				while(node){
+					stack.push(node);
+					node = node.leftChild;
+				}
+				if(stack.isEmpty())
+					break;
+				node = stack.pop();
+				fn(node.val);
+				node = node.rightChild;
+			}
+		}
+
+		// testing
+		var bst = new BinarySearchTree(); 
+		testBst(bst);
+
+	</script>
+</body>
+</html>
