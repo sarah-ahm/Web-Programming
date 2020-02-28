@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lab 6 - Part 3</title>
+	<style>
+		p[id] {
+			height: 100px;
+		}
+
+		#my-list li:nth-child(2) { color: red; }
+
+		.flashy {
+		  animation: blinker 1s linear infinite;
+		}
+
+		@keyframes blinker {  
+		  50% { opacity: 0; }
+		}
+	</style>
+</head>
+<body>
+	<label>My Input: <input type="text" id="myInput"></label><button type="button">Submit</button>
+	<p>All UpperCase</p>
+	<hr>
+	<p id="allUpper"></p>
+	<p>All Lowercase</p>
+	<hr>
+	<p id="allLower"></p>
+	<p>Red Text</p>
+	<hr>
+	<p id="redText"></p>
+	<p>Flashy Text</p>
+	<hr>
+	<p id="flashyText"></p>
+	<!-- Include jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!-- Custom Script -->
+	<script src="part3.js"></script>
+</body>
+</html>

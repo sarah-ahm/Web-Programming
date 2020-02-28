@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en" class="h-100">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Lab 6 - Part 2</title>
+  </head>
+  <body class="h-100">
+    <div class="container h-100">
+      <div class="row align-items-center h-100">
+        <div class="col-sm-12 col-md-8 offset-md-2 h-75">
+          <div class="card mh-100">
+            <div class="card-header">
+              <div class="row align-items-center">
+                <div class="col-6">Contacts</div>
+                <div class="col-6 input-group">
+                  <input id="searchField" type="text" class="form-control" aria-label="Search">
+                  <div class="input-group-append"><button id="searchBtn" class="btn btn-outline-secondary" type="button">Search</button></div>
+                </div>
+              </div>
+            </div>
+            <div class="card-body" style="overflow: auto;">
+              <!-- The Template -->
+              <div id="template" class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <!-- the index number -->
+                  <span id="index" class="input-group-text">1</span>
+                  <span class="input-group-text">Name</span>
+                </div>
+                <!-- The name -->
+                <input name="name" type="text" class="form-control bg-light" readonly="readonly">
+                <div class="input-group-prepend"><span class="input-group-text">@</span></div>
+                <!-- The email -->
+                <input name="email" type="text" class="form-control bg-light" readonly="readonly">
+              </div>
+              <!-- end template -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- Custom JavaScript -->
+    <script type="text/javascript" src="part2.js"></script>
+  </body>
+</html>

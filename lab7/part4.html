@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lab 6 - Part 4</title>
+	<style>
+		div[id] {
+			height: 200px;
+		}
+
+		#my-list li:nth-child(2) { color: red; }
+
+		.flashy {
+		  animation: blinker 1s linear infinite;
+		}
+
+		@keyframes blinker {  
+		  50% { opacity: 0; }
+		}
+	</style>
+</head>
+<body>
+	<p>Sample 1</p>
+	<hr>
+	<div id="sample1"></div>
+	<p>Sample 2</p>
+	<hr>
+	<div id="sample2"></div>
+	<p>Sample 3</p>
+	<hr>
+	<div id="sample3">
+		<h3>My Friends</h3>
+	</div>
+	<!-- Include jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!-- Custom Script -->
+	<script src="part4.js"></script>
+</body>
+</html>
