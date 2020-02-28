@@ -20,3 +20,11 @@ Lab 5
 Lab 6 - Implementation of Snake, played by using the arrow keys to manuveur the snake
 
 Lab 7 - Use XMLHttpRequest object to make HTTP requests to the server for additional resources
+
+Lab 8 
+  
+  - Part 2 - BST using ES6 class declaration syntax
+  
+  - Part 3 - Using node.js to return HTML containing a multiplication table with all of the products from 1 to MAX
+  
+  - Part 4 - Using the fs module
