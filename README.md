@@ -1,7 +1,5 @@
-# COEN161
-## Classwork from COEN161: Web Programming 1 course at Santa Clara University. 
-### HTML5, CSS3, JavaScript, ES6, jQuery, node.js
-
+# COEN161L: Web Programming 1 at Santa Clara University. 
+## HTML5, CSS3, JavaScript, ES6, jQuery, node.js
 
 
 Lab 2 - Create a web site from scratch
